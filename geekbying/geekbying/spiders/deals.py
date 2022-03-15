@@ -9,7 +9,7 @@ class DealsSpider(scrapy.Spider):
 
     def start_requests(self):
 
-        yield scrapy.Request(url="https://www.geekbuying.com/deals", callback=self.parse, headers={'Uger-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'})
+        yield scrapy.Request(url="https://www.amazon.com/s?k=computer&crid=1YSYTW48AH3KF&sprefix=comput%2Caps%2C266&ref=nb_sb_noss_2", callback=self.parse, headers={'Uger-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'})
 
     def parse(self, response):
         products = response.xpath("//div[@class='category_li']")
